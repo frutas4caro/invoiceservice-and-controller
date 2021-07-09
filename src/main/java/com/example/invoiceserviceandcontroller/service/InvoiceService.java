@@ -2,6 +2,7 @@ package com.example.invoiceserviceandcontroller.service;
 
 import com.example.invoiceserviceandcontroller.model.Invoice;
 import com.example.invoiceserviceandcontroller.repository.InvoiceRepository;
+import com.example.invoiceserviceandcontroller.utilities.InvoiceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
@@ -24,7 +25,7 @@ public class InvoiceService {
     // Read an invoice by invoice id
 
     public Invoice readInvoice(Long id){
-        return invoiceRepository.findById(id).orElseThrow(() -> new HttpClientErrorException.NotFound());
+        return invoiceRepository.findById(id).orElseThrow(() -> new InvoiceNotFoundException(id));
     }
 
     // Read all of the invoice associated to a customer
