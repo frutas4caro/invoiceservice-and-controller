@@ -20,4 +20,11 @@ public class InvoiceserviceController {
     Invoice newInvoice(@RequestBody Invoice newInvoice){
         return invoiceService.createInvoice(newInvoice);
     }
+
+    @PutMapping("/invoices/{id}")
+    Invoice updateInvoice(@RequestBody Invoice existingInvoice, @PathVariable Long id) {
+        return invoiceService.updateInvoice(existingInvoice, id); }
+
+    @DeleteMapping("/invoices/{id}")
+    void deleteInvoice(@PathVariable Long id) { invoiceService.deleteInvoice(id); }
 }
