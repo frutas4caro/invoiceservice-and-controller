@@ -19,12 +19,12 @@ public class Invoice {
     private String vendorName;
 
     @Column
-    private Integer amount;
+    private Double amount;
 
     @Column(length = 2000)
     private String invoiceDescription;
 
-    public Invoice(Integer customerId, String invoiceNumber, String vendorName, Integer amount, String invoiceDescription){
+    public Invoice(Integer customerId, String invoiceNumber, String vendorName, Double amount, String invoiceDescription){
         this.customerId = customerId;
         this.invoiceNumber = invoiceNumber;
         this.vendorName = vendorName;
@@ -64,11 +64,11 @@ public class Invoice {
         this.vendorName = vendorName;
     }
 
-    public Integer getAmount() {
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(Integer amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
     }
 

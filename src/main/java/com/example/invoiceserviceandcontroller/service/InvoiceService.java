@@ -32,7 +32,7 @@ public class InvoiceService {
                 () -> new RuntimeException("Invoice does not exist or cannot be deleted"));
         invoiceRepository.delete(invoice);
     }
-    
+
     public Invoice updateInvoice(Invoice updatedInvoice, Long id) {
 
         Optional<Invoice> invoice = invoiceRepository.findById(id);
