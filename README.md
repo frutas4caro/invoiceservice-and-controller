@@ -3,7 +3,24 @@
 
 ### ---Instructions for Running the service locally---
 
-###Maven Instructions
+### Running the Jar
+***Make sure to have Java running locally***
+
+[1]
+`git clone https://github.com/frutas4caro/invoiceservice-and-controller.git`
+
+[2] Make sure you are in the directory where you have cloned the project.
+
+[3] Run the following command:
+`java -jar ~/invoiceservice-and-controller/target/invoiceservice-and-controller-0.0.1-SNAPSHOT.jar`
+
+[4] Go to browser
+
+`http://localhost:8080/invoices/1`
+
+Verify the output
+
+### Maven Instructions
 ***You need to have Maven and Java installed to navigate these instructions***
 
 [1]
@@ -19,10 +36,10 @@
 
 `http://localhost:8080/invoices/1`
 
-Verify the output: 
+Verify the output
 
 
-###Docker Instructions
+### Docker Instructions
 
 ***You will need to have docker installed locally to navigate these instructions***
 
@@ -33,7 +50,7 @@ Verify the output:
 [3] Go to the browser
 `http://localhost:8887/invoices/1`
 
-Verify the output:
+Verify the output
 
 ## Documentation
 
